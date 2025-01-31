@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p#result {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+            color: #007bff;
+        }
+    </style>
+    <title>Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <div class="container">
+        <label for="from">From:</label>
+        <select id="from">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="AED">AED(Dubai)</option>
+            <option value="SGD">SGD(Singapore)</option>
+            <option value="THB">THB(Thailand)</option>
+            <option value="MYR">MYR(Malaysia)</option>
+            <option value="IDR">IDR(Indonesia)</option>
+        </select>
+        <label for="to">To:</label>
+        <select id="to">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="AED">AED(Dubai)</option>
+            <option value="SGD">SGD(Singapore)</option>
+            <option value="THB">THB(Thailand)</option>
+            <option value="MYR">MYR(Malaysia)</option>
+            <option value="IDR">IDR(Indonesia)</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount">
+        <button id="convert" onclick="convert()">Convert</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
